@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de médias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora de médias</h1>
-    <div>
-        <input type="text" name="" id="ati">
-        <input type="number" name="" id="not">
-        <button onclick="adi()">Adicionar +</button>
-    </div>
-    <div id="res">
-    
-    </div>
-    <script>
-    function adi(){
-        let ati = document.getElementById(`ati`)
-        let not = document.getElementById(`not`)
-        let res = document.getElementById(`res`)
-        let med = 7
-        if(not.value >= med){
-            res.innerHTML = `Parabéns, aprovado!`
-        }else {
-            res.innerHTML = `Reprovado!`
-        }
-
-    }
-    </script>
-
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="capelo e diploma">
+            <h1>Calculadora de médias</h1>
+        </header>
+        <form id="fa">
+        <input type="text" required placeholder="Nome da atividade" name="" id="noa">
+        <input type="number" required placeholder="Nota da atividade" min="0" max="10" name="" id="nta">
+        <button type="submit">Adicionar +</button>
+        </form>
+        <table> <!--Tabela-->
+            <thead> <!--Cabeçalho da tabela-->
+                <tr> <!--Linha da tabela-->
+                    <th> <!--Coluna da tabela-->
+                    Nome da atividade
+                    </th>
+                    <th>Nota da atividade</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
+            <tbody> 
+            </tbody> <!--Conteudo da tabela-->
+            <tfoot>
+                <tr>
+                    <td>Média Final</td> <!--Adicionar coluna na tabela-->
+                    <td id="mdfv">---</td>
+                    <td id="mdfr">---</td>
+                </tr>
+            </tfoot>
+        </table>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
